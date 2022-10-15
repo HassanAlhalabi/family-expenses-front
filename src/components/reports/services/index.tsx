@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FormControl,
+import { Box, FormControl,
          FormLabel, 
          Select, 
          Skeleton, 
@@ -44,28 +44,20 @@ const ServicesReport = () => {
             </FormControl>
             {
                 isLoading ? 
-                <>
-                    <Skeleton width={150} height={100} startColor='gray.300' endColor='gray.100' />
-                    <Skeleton width={150} height={100} startColor='gray.300' endColor='gray.100' />
-                </> : 
-                <StatGroup gap={20}>
+                <Box display={'flex'}>
+                    <Skeleton marginRight={'auto'} width={150} height={100} startColor='gray.300' endColor='gray.100' />
+                    <Skeleton  marginRight={'auto'}width={150} height={100} startColor='gray.300' endColor='gray.100' />
+                </Box> : 
+                <StatGroup gap={5}>
                     <Stat>
                         <StatLabel>Service Expenses</StatLabel>
                         <StatNumber>{data.total === null ? 0 : data.total} SP</StatNumber>
-                        <StatHelpText>
-                            <StatArrow type='increase' />
-                            23.36%
-                        </StatHelpText>
                     </Stat>
                     <Stat>
                         <StatLabel>Total Services Expenses</StatLabel>
                         <StatNumber>{
                             data.servicesTotal
                         } SP</StatNumber>
-                        <StatHelpText>
-                            <StatArrow type='increase' />
-                            23.36%
-                        </StatHelpText>
                     </Stat>
                 </StatGroup>
             }

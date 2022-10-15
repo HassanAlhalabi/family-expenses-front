@@ -45,17 +45,13 @@ const YearReport = () => {
                     {years().map(y => <option value={y}>{y}</option>)}
                 </Select>
             </FormControl>
-            <StatGroup gap={20}>
+            <StatGroup gap={20} textAlign="left">
                 {
                     isLoading ? 
-                    <Skeleton width={150} height={100} startColor='gray.300' endColor='gray.100' /> : 
+                    <Skeleton marginRight={'auto'} width={150} height={100} startColor='gray.300' endColor='gray.100' /> : 
                     <Stat>
                         <StatLabel>{year} Expenses</StatLabel>
                         <StatNumber>{data.total === null ? 0 : data.total} SP</StatNumber>
-                        <StatHelpText>
-                            <StatArrow type='increase' />
-                            23.36%
-                        </StatHelpText>
                     </Stat>
                 }
             </StatGroup>

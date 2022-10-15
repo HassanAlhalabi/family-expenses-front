@@ -1,45 +1,23 @@
-import { Stat, StatArrow, StatGroup, StatHelpText, StatLabel, StatNumber } from "@chakra-ui/react"
+import { AddIcon } from "@chakra-ui/icons"
+import { Button, ButtonGroup } from "@chakra-ui/react"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   return (
-    <StatGroup marginTop={30} gap={20}>
-
-      <Stat>
-        <StatLabel>Sent</StatLabel>
-        <StatNumber>345,670</StatNumber>
-        <StatHelpText>
-          <StatArrow type='increase' />
-          23.36%
-        </StatHelpText>
-      </Stat>
-
-      <Stat>
-        <StatLabel>Sent</StatLabel>
-        <StatNumber>345,670</StatNumber>
-        <StatHelpText>
-          <StatArrow type='increase' />
-          23.36%
-        </StatHelpText>
-      </Stat>
-
-      <Stat>
-        <StatLabel>Sent</StatLabel>
-        <StatNumber>345,670</StatNumber>
-        <StatHelpText>
-          <StatArrow type='increase' />
-          23.36%
-        </StatHelpText>
-      </Stat>
-
-      <Stat>
-        <StatLabel>Clicked</StatLabel>
-        <StatNumber>45</StatNumber>
-        <StatHelpText>
-          <StatArrow type='decrease' />
-          9.05%
-        </StatHelpText>
-      </Stat>
-    </StatGroup>
+    <ButtonGroup gap={4} display={'flex'} flexWrap='wrap' colorScheme={'teal'} marginTop={50}>
+      <Button margin={0} rightIcon={<AddIcon />}>
+        <Link to={'/outlays'}>Add New Outlay</Link>
+      </Button>
+      <Button margin={0} rightIcon={<AddIcon />}>
+        <Link to={'/users'}>Add New User</Link>
+      </Button>
+      <Button margin={0} rightIcon={<AddIcon />}>
+        <Link to={'/outlay-types'}>Add New Outlay Type</Link>
+      </Button>
+      <Button margin={0} rightIcon={<AddIcon />}>
+        <Link to={'/materials'}>Add New Material</Link>
+      </Button>
+    </ButtonGroup>
   )
 }
 
