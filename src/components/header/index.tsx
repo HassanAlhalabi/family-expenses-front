@@ -51,6 +51,8 @@ const Header = () => {
               alignItems="center"
               justifyContent={'center'}
               fontWeight='bold'
+              marginRight={{ base: "", md: "auto" }}
+              gap={3}
             >
 
               <Show below='md'>
