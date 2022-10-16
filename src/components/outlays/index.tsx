@@ -166,7 +166,7 @@ const Outlays = () => {
             });
             refetch();
             toast({
-                description: 'New Outlay Has Been Updated Successfully',
+                description: 'Outlay Has Been Updated Successfully',
                 status: 'success',
                 duration: 9000,
                 isClosable: true,
@@ -222,7 +222,8 @@ const Outlays = () => {
         <Stack spacing={10} marginTop={50}>
             {
                 deleteOutlayMutaion.isLoading ||
-                addOutlayMutaion.isLoading &&
+                addOutlayMutaion.isLoading ||
+                editOutlayMutaion.isLoading &&
                 <Progress isIndeterminate size='xs' colorScheme='teal' />
             }
             <Box>

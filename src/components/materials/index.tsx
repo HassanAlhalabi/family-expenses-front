@@ -160,7 +160,7 @@ const Materials = () => {
             });
             refetch();
             toast({
-                description: 'New Material Has Been Updated Successfully',
+                description: 'Material Has Been Updated Successfully',
                 status: 'success',
                 duration: 9000,
                 isClosable: true,
@@ -216,7 +216,8 @@ const Materials = () => {
         <Stack spacing={10} marginTop={50}>
             {
                 deleteMaterialMutaion.isLoading ||
-                addMaterialMutaion.isLoading &&
+                addMaterialMutaion.isLoading ||
+                editMaterialMutaion.isLoading &&
                 <Progress isIndeterminate size='xs' colorScheme='teal' />
             }
             <Box>

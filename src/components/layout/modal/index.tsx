@@ -23,7 +23,7 @@ const PopUp = ({
         onClose={onClose}
       >
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxWidth={'90vw'}>
           <ModalHeader>{heading}</ModalHeader>
 
           <ModalCloseButton />

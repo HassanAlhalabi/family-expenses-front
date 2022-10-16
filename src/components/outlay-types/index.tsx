@@ -97,7 +97,7 @@ const OutlayTypes = () => {
             });
             refetch();
             toast({
-                description: 'New OutlayType Has Been Created Successfully',
+                description: 'New Outlay Type Has Been Created Successfully',
                 status: 'success',
                 duration: 9000,
                 isClosable: true,
@@ -157,7 +157,7 @@ const OutlayTypes = () => {
             });
             refetch();
             toast({
-                description: 'New OutlayType Has Been Updated Successfully',
+                description: 'Outlay Type Has Been Updated Successfully',
                 status: 'success',
                 duration: 9000,
                 isClosable: true,
@@ -189,7 +189,7 @@ const OutlayTypes = () => {
         if(res.success) {
             refetch();
             toast({
-                description: 'OutlayType Has Been Deleted Successfully',
+                description: 'Outlay Type Has Been Deleted Successfully',
                 status: 'success',
                 duration: 9000,
                 isClosable: true,
@@ -213,7 +213,8 @@ const OutlayTypes = () => {
         <Stack spacing={10} marginTop={50}>
             {
                 deleteOutlayTypeMutaion.isLoading ||
-                addOutlayTypeMutaion.isLoading &&
+                addOutlayTypeMutaion.isLoading || 
+                editOutlayTypeMutaion.isLoading &&
                 <Progress isIndeterminate size='xs' colorScheme='teal' />
             }
             <Box>

@@ -152,7 +152,7 @@ const Users = () => {
             });
             refetch();
             toast({
-                description: 'New User Has Been Updated Successfully',
+                description: 'User Has Been Updated Successfully',
                 status: 'success',
                 duration: 9000,
                 isClosable: true,
@@ -208,7 +208,8 @@ const Users = () => {
         <Stack spacing={10} marginTop={50}>
             {
                 deleteUserMutaion.isLoading ||
-                addUserMutaion.isLoading &&
+                addUserMutaion.isLoading || 
+                editUserMutaion.isLoading &&
                 <Progress isIndeterminate size='xs' colorScheme='teal' />
             }
             <Box>

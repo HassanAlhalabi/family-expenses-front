@@ -47,17 +47,15 @@ const Header = () => {
 
             <Stack
               direction={{ base: "column", md: "row" }}
-              display={{ base: true ? "block" : "none", md: "flex" }}
-              width={{ base: "full", md: "auto" }}
+              display={{ base: true ? "flex" : "none", md: "flex" }}
               alignItems="center"
-              flexGrow={1}
+              justifyContent={'center'}
               fontWeight='bold'
-              mt={{ base: 4, md: 0 }}
             >
 
               <Show below='md'>
                 <Button colorScheme='teal' onClick={() => setDrawerOpen(prev => !prev)}>
-                  <HamburgerIcon />
+                  <HamburgerIcon fontSize={'2xl'} />
                 </Button>
               </Show>
               <Hide below='md'>
